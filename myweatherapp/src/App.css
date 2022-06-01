@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+.searchbar {
+  display: flex;
+  width: 600px;
+  height: 100px;
+  margin: 0 auto;
+  align-self: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+.form-control{
+  height: 30px;
+  display: flex;
+  align-self: center;
+}
+
+
+
