@@ -15,7 +15,7 @@ export default function WeatherFetch() {
 
         const apikey = "f2b6b296aadd41d49ee8684f217a9e16";
 
-        const url = `https://api.weatherbit.io/v2.0/current?postal_code=${locationKey}&key=${apikey}`;
+        const url = `https://api.weatherbit.io/v2.0/current?city=${locationKey}&key=${apikey}`;
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
@@ -45,6 +45,12 @@ export default function WeatherFetch() {
             locationKey={locationKey}
             setLocationKey={setLocationKey}
             />
+            <div className='container'>
+                <div className='row'>
+                    <div className='box2'>                      
+                    </div> 
+                </div>
+            </div>
            { 
            show &&
             <WeatherStats 
