@@ -28,7 +28,7 @@ export default function WeatherFetch() {
         // added setTemperature/setTempy hook to change celcius to fahrenheit
         if (weather) {
             setShow(true)
-            setTempy(data?.data[0]?.temp * 9/5 + 32 )
+            setTempy(data?.data[0]?.temp * 9/5 + 32)
         } else {
             setShow(false)
             console.log('Search results undefined')
@@ -47,7 +47,8 @@ export default function WeatherFetch() {
             />
             <div className='container'>
                 <div className='row'>
-                    <div className='box2'>                      
+                    <div className='box2'>
+                        <h1 className='floating'>Begin your search!</h1>                      
                     </div> 
                 </div>
             </div>
@@ -57,6 +58,7 @@ export default function WeatherFetch() {
                 name={weather?.data[0]?.city_name}
                 state={weather?.data[0]?.state_code}
                 temperature={tempy}
+                description={weather?.data[0]?.weather.description}
                 time={weather?.data[0]?.datetime}
                 />
            }

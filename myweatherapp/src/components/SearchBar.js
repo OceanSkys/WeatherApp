@@ -15,10 +15,15 @@ const SearchBar = (props) => {
                 className='searchbarinput'
                 value={props.value}
                 onChange={(event) => props.setLocationKey(event.target.value)}
-                placeholder='Start searching...'       
+                placeholder='ex: Los Angeles, CA '
+                type='text'       
             >
             </input>
-            <button className='submit' type="submit">Submit</button>
+            <button className='submit' type="submit">
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+            </button>
         </form>
     );
 };
