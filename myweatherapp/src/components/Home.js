@@ -11,6 +11,7 @@ export default function WeatherFetch() {
     const [tempy, setTempy] = useState('')
     // const [data, setData] = useState('')
 
+    
     const getWeather = async (locationKey) =>{
 
         const apikey = "f2b6b296aadd41d49ee8684f217a9e16";
@@ -26,16 +27,25 @@ export default function WeatherFetch() {
 
         // added setShow hook so WeatherStats props aren't calling empty data array for api
         // added setTemperature/setTempy hook to change celcius to fahrenheit
-        if (weather) {
-            setShow(true)
-            setTempy(data?.data[0]?.temp * 9/5 + 32)
-        } else {
-            setShow(false)
-            console.log('Search results undefined')
-        }
+        // if (weather != 1) {
+        //     setShow(true)
+        //     setTempy(weather?.data[0]?.temp * 9/5 + 32 )
+        // } else if (typeof weather === 'undefined' || weather.length <= 0) {       
+        //     setShow(false)
+        //     console.log('Search results undefined')       
+        // }
+    
     }
     //Updates search results for getWeather function
     useEffect(() => {
+        // instead of using weather/data is a parameter, I'm using locationkey value length as a parameter for showing results
+        if (locationKey.length > 1) {
+            setShow(true)
+            setTempy(weather?.data[0]?.temp * 9/5 + 32 )
+        } else if (typeof weather === 'undefined' || locationKey.length == 0) {       
+            setShow(false)
+            console.log('Search results undefined')       
+        }
         getWeather(locationKey)
     }, [locationKey]);
 

@@ -20,7 +20,7 @@ const SearchBar = (props) => {
             >
             </input>
             <button className='submit' type="submit">
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     arrow_forward
                 </span>
             </button>
