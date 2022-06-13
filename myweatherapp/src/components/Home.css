@@ -59,6 +59,14 @@
     margin-top: 20px;
     background-color: white;
 }
+.row2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+}
 .searchbar {
     margin-top: 30px;
     height: fit-content;
