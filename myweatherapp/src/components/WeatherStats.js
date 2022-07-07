@@ -1,22 +1,32 @@
 
+import '../App.css';
+import { useContext } from "react";
+// import SearchContext from App.js
+import { WeatherContext } from '../App';
+
 export default function WeatherStats(props) {
 
-    var desc = 'oof';
+    const { weatherValue, setWeatherValue } = useContext(WeatherContext);
 
-    if (props.temperature >= 70) {
+    // var desc = 'oof';
 
-        var desc = 'Looks like its sunny today';
+    if (props.temperature >= 71) {
+
+        var desc = 'Looks like it is sunny today.';
         var weatherimg = 'sunny';
         var face = 'sentiment_very_satisfied';
+        setWeatherValue('App2')
 
-    } else if (50 > props.temperature < 70) {
-        var desc = 'A little cooler today'
+    } else if (props.temperature >=60 && props.temperature <=70) {
+        var desc = 'A little cooler today.'
         var weatherimg = 'ac_unit';
         var face = 'sentiment_satisfied';
+        setWeatherValue('App3')
     } else {
-        var desc = 'its cooooooooooold'
+        var desc = 'Brrrr!!!'
         var weatherimg = 'severe_cold';
         var face = 'mood_bad';
+        setWeatherValue('App4')
     };
 
     return (

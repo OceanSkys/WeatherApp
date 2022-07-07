@@ -1,10 +1,14 @@
 import React from 'react';
 import { useState } from 'react'
 import WeatherStats from './WeatherStats';
+import { useContext } from "react";
+// import SearchContext from App.js
+import { WeatherContext } from '../App';
 
 const SearchBar = () => {
     const [weather, setWeather] = useState(null);
     const [locationKey, setLocationKey] = useState('');
+    const { weatherValue, setWeatherValue } = useContext(WeatherContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
