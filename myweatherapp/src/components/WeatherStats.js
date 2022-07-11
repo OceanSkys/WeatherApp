@@ -31,7 +31,7 @@ export default function WeatherStats(props) {
 
     return (
         <div>
-            <div className='container'>
+            <div className='container shrink'>
                 <div className='row'>
                     <div className='box'>
                         <h1>{props.name}, {props.state}</h1>

@@ -125,3 +125,26 @@
     height: 30px;
     margin-right: 20px;
 }
+/* .shrink {
+    display: flex;
+
+} */
+@media (max-width: 800px) { 
+    .box {
+        width: 400px;
+    }
+    .box2 {
+        width: 400px;        
+    }
+    .searchbar {
+        width: 400px;
+        height: 50px;
+    }
+    .citysearch {
+        width: 100px;
+        font-size: 15px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
