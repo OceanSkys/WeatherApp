@@ -48,11 +48,11 @@ export default function WeatherStats(props) {
                         <h1>{props.description}</h1>
                         <h1>{(props.time).slice(8)}</h1>  
                         <div className="row2">
-                            <div>
+                            <div className='desc'>
                                 <h1>{desc}</h1>
                             </div>
-                            <div style={{marginTop: 10, marginLeft: 10}}>
-                                <span class="material-symbols-outlined" style={{fontSize: 50}}>
+                            <div className='face2' style={{marginTop: 10, marginLeft: 10}}>
+                                <span class="material-symbols-outlined face2" style={{fontSize: 50}}>
                                 {face}
                                 </span>        
                             </div>
