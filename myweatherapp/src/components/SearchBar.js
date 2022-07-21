@@ -37,7 +37,7 @@ const SearchBar = () => {
                     className='searchbarinput'
                     value={locationKey}
                     onChange={(event) => setLocationKey(event.target.value)}
-                    placeholder='ex: Los Angeles, CA '
+                    placeholder='ex: Fresno, CA '
                     type='text'       
                 >
                 </input>

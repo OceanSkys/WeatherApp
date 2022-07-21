@@ -49,7 +49,7 @@
 }
 .box {
     width: 600px;
-    height: 500px;
+    height: 520px;
     border: solid;
     background-color: white;
     border-color: aqua;
@@ -129,9 +129,22 @@
     display: flex;
 
 } */
+.sun {
+    font-size: 5vw;
+}
+.face2 {
+    font-size: 4vw;
+}
+
 @media (max-width: 800px) { 
+    .sun {
+        font-size: 8vw;
+    }
+    .face2 {
+        font-size: 10vw;
+    }
     .box {
-        height: 45vh;
+        height: 50vh;
         width: 65vw;
         display: flex;
         justify-content: center;
@@ -156,6 +169,11 @@
         display: flex;
         text-align: center;
         justify-content: center;
+    }
+    .row2 {
+        display: flex;
+        justify-items: ;
+        align-content: center;
     }
 }
 @media (max-width: 455px) { 
@@ -204,5 +222,11 @@
         display: flex;
         justify-content: center;
         width: 30px;
+    }
+    .sun {
+        font-size: 8vw;
+    }
+    .face2 {
+        font-size: 10vw;
     }
 }

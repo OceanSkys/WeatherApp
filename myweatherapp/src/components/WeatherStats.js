@@ -39,8 +39,8 @@ export default function WeatherStats(props) {
                             <div>
                                 <h1>{props.temperature.toFixed(1)} °F</h1>  
                             </div>
-                            <div className='floating' style={{marginLeft: 10, marginTop: 5 }}>
-                                <span class="material-symbols-outlined"  style={{fontSize: 50}}>
+                            <div className='floating' style={{marginLeft: 10, marginTop: 15 }}>
+                                <span class="material-symbols-outlined sun">
                                 {weatherimg}
                                 </span>        
                             </div>
@@ -52,7 +52,7 @@ export default function WeatherStats(props) {
                                 <h1>{desc}</h1>
                             </div>
                             <div className='face2' style={{marginTop: 10, marginLeft: 10}}>
-                                <span class="material-symbols-outlined face2" style={{fontSize: 50}}>
+                                <span class="material-symbols-outlined face2">
                                 {face}
                                 </span>        
                             </div>
