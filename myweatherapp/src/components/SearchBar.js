@@ -41,7 +41,7 @@ const SearchBar = () => {
                     type='text'       
                 >
                 </input>
-                <button className='submit' type="submit">
+                <button className='submit btn1' type="submit">
                     <span className="material-symbols-outlined">
                         arrow_forward
                     </span>

@@ -142,7 +142,8 @@
     }
     .box2 {
         height:250px;
-        width: 400px;        
+        width: 400px;
+        border-color: aqua;        
     }
     .searchbar {
         width: 340px;
@@ -159,24 +160,25 @@
 }
 @media (max-width: 455px) { 
     .box {
-        height: 45vh;
+        height: 35vh;
         width: 65vw;
         border: solid;
-        font-size: 1.3vh;
+        font-size: 1.1vh;
+        border-color: aqua;
     }
     .box2 {
         width: 35vh;  
-        height: 30vw;      
+        height: 50vw;      
         border: solid;
-        border-color: red;
+        border-color: aqua;
         font-size: 1.3vh;
     }
     .searchbar {
         height: 10vh;
-        width: 70vw;
+        width: 60vw;
     }
     .searchbarinput {
-        width: 25vw;
+        width: 20vw;
     }
     /* .container { */
         /* display: flex;
@@ -185,7 +187,7 @@
     /* } */
     .citysearch {
         margin-left: 20px;
-        font-size:15px;
+        font-size: 1.5vh;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -197,5 +199,10 @@
         margin-right: 20px;
         display: flex;
         align-self: center;
+    }
+    .btn1 {
+        display: flex;
+        justify-content: center;
+        width: 30px;
     }
 }
