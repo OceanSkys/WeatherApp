@@ -47,6 +47,15 @@ const SearchBar = () => {
                     </span>
                 </button>
             </form>
+        { weather ? ( 
+            <WeatherStats 
+                name={weather?.data[0]?.city_name}
+                state={weather?.data[0]?.state_code}
+                temperature={weather?.data[0]?.temp * 9/5 + 32}
+                description={weather?.data[0]?.weather.description}
+                time={weather?.data[0]?.datetime}
+                />         
+            ) : (
             <div className='container'>
                 <div className='row'>
                     <div className='box2'>
@@ -54,16 +63,7 @@ const SearchBar = () => {
                     </div> 
                 </div>
             </div>
-        { weather && 
-            <WeatherStats 
-                name={weather?.data[0]?.city_name}
-                state={weather?.data[0]?.state_code}
-                temperature={weather?.data[0]?.temp * 9/5 + 32}
-                description={weather?.data[0]?.weather.description}
-                time={weather?.data[0]?.datetime}
-                />
-          
-            }
+            )};
         </div>
     );
 };

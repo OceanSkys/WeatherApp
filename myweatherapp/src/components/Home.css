@@ -1,8 +1,10 @@
 .App {
     background-image: url('../imgs/background.jpg');
     position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
     z-index: 1;
 }
@@ -11,7 +13,7 @@
     position: absolute;
     display: block;
     background-size: cover;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
     z-index: 1;
 }
@@ -20,7 +22,7 @@
     position: absolute;
     display: block;
     background-size: cover;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
     z-index: 1;
 }
@@ -28,8 +30,8 @@
     background-image: url('../imgs/supercold.jpg');
     position: absolute;
     display: block;
-    /* background-size: cover; */
-    min-height: 100%;
+    background-size: cover;
+    min-height: 100vh;
     width: 100%;
     z-index: 1;
 }
@@ -94,7 +96,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
     background-color: white;
 }
 .row2 {
@@ -104,6 +106,7 @@
     justify-content: center;
     align-content: center;
     background-color: white;
+    margin-bottom: -40px;
 }
 .searchbar {
     margin-top: 30px;
@@ -128,18 +131,27 @@
 } */
 @media (max-width: 800px) { 
     .box {
-        width: 400px;
+        height: 45vh;
+        width: 65vw;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-top: -20px;
+        padding-bottom: 35px;
+        font-size: 1.5vh;
     }
     .box2 {
+        height:250px;
         width: 400px;        
     }
     .searchbar {
-        width: 400px;
-        height: 50px;
+        width: 340px;
+        height: 60px;
     }
     .citysearch {
         width: 100px;
-        font-size: 15px;
+        font-size: 13px;
+        margin-left: 20px;
         display: flex;
         text-align: center;
         justify-content: center;
@@ -147,20 +159,30 @@
 }
 @media (max-width: 455px) { 
     .box {
-        width: 250px;
-        height: 590px;
+        height: 45vh;
+        width: 65vw;
+        border: solid;
+        font-size: 1.3vh;
     }
     .box2 {
-        width: 250px;  
-        height: 590px;      
+        width: 35vh;  
+        height: 30vw;      
+        border: solid;
+        border-color: red;
+        font-size: 1.3vh;
     }
     .searchbar {
-        width: 250px;
-        height: 70px;
+        height: 10vh;
+        width: 70vw;
     }
     .searchbarinput {
-        width: 90px;
+        width: 25vw;
     }
+    /* .container { */
+        /* display: flex;
+        justify-content: center;
+        align-content: center; */
+    /* } */
     .citysearch {
         margin-left: 20px;
         font-size:15px;
