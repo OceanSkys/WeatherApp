@@ -18,7 +18,7 @@
 }
 .floating {  
   animation-name: floating;
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   margin-bottom: 40px;
@@ -27,6 +27,7 @@
 
 @keyframes floating {
   from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 15px); }
-  to   { transform: translate(0, -0px); }    
+  30%  { transform: translate(0, 0px); }
+  30%   { transform: translate(0, -35px); }
+   to     { transform: translate(0,  0px); }    
 }

@@ -132,6 +132,15 @@
 .sun {
     font-size: 5vw;
 }
+.sunny {
+    color: yellow;
+}
+.cold {
+    color: lightblue;
+}
+.colder {
+    color:deepskyblue;
+}
 .face2 {
     font-size: 4vw;
 }
