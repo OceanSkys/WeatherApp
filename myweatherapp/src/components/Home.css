@@ -187,8 +187,8 @@
 }
 @media (max-width: 455px) { 
     .box {
-        height: 35vh;
-        width: 65vw;
+        height: 40vh;
+        width: 50vw;
         border: solid;
         font-size: 1.1vh;
         border-color: aqua;
