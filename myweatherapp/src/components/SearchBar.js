@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from 'react'
+import Nav from 'react-bootstrap/Nav';
+import { useState } from 'react';
 import WeatherStats from './WeatherStats';
 import { useContext } from "react";
 // import SearchContext from App.js
@@ -24,6 +25,7 @@ const SearchBar = () => {
             setWeather(data);
             console.log(data);
         }
+
     getWeather(locationKey)
 
     }
@@ -37,7 +39,7 @@ const SearchBar = () => {
                     className='searchbarinput'
                     value={locationKey}
                     onChange={(event) => setLocationKey(event.target.value)}
-                    placeholder='ex: Fresno, CA '
+                    placeholder='ex: Fresno, CA'
                     type='text'       
                 >
                 </input>
