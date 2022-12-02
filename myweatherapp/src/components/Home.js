@@ -7,8 +7,8 @@ export default function WeatherFetch() {
 
     return (
         <div>
-            <SearchBar
-            />
+            {/* <SearchBar
+            /> */}
         </div>
     )
 }

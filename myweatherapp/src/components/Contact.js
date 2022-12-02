@@ -4,7 +4,7 @@
 
     return(
         <div>
-            <h1 style={{color: 'blue'}}>Contact page bb</h1>
+            <h1 style={{color: 'blue', display: 'flex', justifyContent:'center'}}>Contact page bb</h1>
         </div>
     );
  }
