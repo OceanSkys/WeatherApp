@@ -9,10 +9,12 @@ export default function HeaderFooter(){
         <div>
             <div className=''>
                 <Navbar bg="light" expand="lg">
-                    <NavLink style={{textDecoration: 'none', width: '150px', height: 'auto', color: 'black'}} className='fs-3 mx-5 py-2 font1' to='/'>Weather App</NavLink>
+                    <NavLink style={{textDecoration: 'none', width: '33%', height: 'auto', color: 'black'}} className='fs-3 mx-5 py-2 font1' to='/'>Weather App</NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" style={{marginRight: '20px'}}/>
-                    <SearchBar/>
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <div style={{display:'flex', justifyContent:'right', border:'solid', width: '33%', height:'120px'}}>
+                        <SearchBar/>
+                    </div>
+                    <Navbar.Collapse style={{width:'33%'}} id="basic-navbar-nav">
                         <Nav className="me-auto nav">
                             <div className='nav-div'>
                                 <NavLink style={{textDecoration: 'none'}} to='/'>Home</NavLink>

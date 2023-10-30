@@ -8,6 +8,7 @@ export default function WeatherStats(props) {
 
     const { weatherValue, setWeatherValue } = useContext(WeatherContext);
     const [classUpdate, setClassUpdate] = useState('');
+    const [finalTime, setFinalTime] = useState('')
 
         if (props.temperature >= 71) {
 
@@ -44,6 +45,28 @@ export default function WeatherStats(props) {
             }; 
     }, [weatherValue]);
 
+    useEffect(() => {
+
+        let timeInt = parseInt((props.time.slice(11)))
+        let timeIntSeg1 = parseInt((props.time.slice(13)))
+
+        if (timeInt >= 1) {
+
+            let newTime = timeInt.toString()
+            let string1 = timeIntSeg1.toString()
+
+            setFinalTime(newTime + ":" + string1)
+
+        } else if (props.temperature >=60 && props.temperature <=70) {
+
+            setClassUpdate('cold');
+
+        } else {
+
+            setClassUpdate('colder');
+        }; 
+}, [weatherValue]);
+
     return (
         <div>
             <div className='container shrink'>
@@ -63,7 +86,7 @@ export default function WeatherStats(props) {
                             </div>
                         </div>   
                         <h1>{props.description}</h1>
-                        <h1>{(props.time).slice(8)}</h1>  
+                        <h1>{finalTime}</h1>  
                         <div className="row2">
                             <div className='desc'>
                                 <h1>{desc}</h1>

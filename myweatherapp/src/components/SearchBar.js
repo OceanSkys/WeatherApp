@@ -1,6 +1,6 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import WeatherStats from './WeatherStats';
 import { useContext } from "react";
 // import SearchContext from App.js
@@ -17,9 +17,9 @@ const SearchBar = () => {
 
         async function getWeather(locationKey) {
 
-            const API_KEY = 'f2b6b296aadd41d49ee8684f217a9e16';
-    
-            const url = `https://api.weatherbit.io/v2.0/current?city=${locationKey}&key=${API_KEY}`;
+            const API_KEY = '5262afffa9a84a598e192941232510';
+        //    Old url = https://api.weatherbit.io/v2.0/current?city=${locationKey}&key=${API_KEY}
+            const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${locationKey}`;
             const response = await fetch(url);
             const data = await response.json();
             setWeather(data);
@@ -28,9 +28,13 @@ const SearchBar = () => {
 
     getWeather(locationKey)
 
-    }
 
-    
+    }   
+
+    useEffect(() => {
+        console.log("weather", weather?.location?.name)
+        }, [weather]);
+
     return (
         <div>
             <form onSubmit={handleSubmit} className='searchbar'>
@@ -51,11 +55,11 @@ const SearchBar = () => {
             </form>
         { weather ? ( 
             <WeatherStats 
-                name={weather?.data[0]?.city_name}
-                state={weather?.data[0]?.state_code}
-                temperature={weather?.data[0]?.temp * 9/5 + 32}
-                description={weather?.data[0]?.weather.description}
-                time={weather?.data[0]?.datetime}
+                name={weather?.location?.name}
+                state={weather?.location?.region}
+                temperature={weather?.current?.temp_c * 9/5 + 32}
+                description={weather?.current?.condition?.text}
+                time={(weather?.location?.localtime)}
                 />         
             ) : (
             <div className='container'>
